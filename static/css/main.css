@@ -1,0 +1,1648 @@
+@import url("/static/css/fonts.css");
+
+:root {
+  --color-primary: #1e3a8a;
+  --color-primary-strong: #0f172a;
+  --color-accent: #2563eb;
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text: #1f2937;
+  --color-text-muted: #475569;
+  --color-border: #cbd5e1;
+  --color-focus: #2563eb;
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--color-bg);
+  font-family: "roboto-regular", Arial, sans-serif;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Header styled closer to legacy site */
+.site-header {
+  position: relative;
+  z-index: 20;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.top-nav {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-nav .brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.top-nav .brand:hover {
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 178px;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+  border-radius: 6px;
+}
+
+/* Хамбургер дугме – видљиво само на малим екранима */
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: #0f172a;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-toggle:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+.nav-toggle:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+.nav-toggle-icon {
+  display: block;
+  width: 1.25rem;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+  box-shadow: 0 -6px 0 currentColor, 0 6px 0 currentColor;
+}
+
+/* Мени – тамни текст, pill активан линк */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--color-text);
+  padding: 0.38rem 0.78rem;
+  border-radius: 4px;
+  font-size: 0.98rem;
+  font-weight: 500;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.menu a:hover {
+  background: #f0f0f0;
+  color: var(--color-text);
+}
+
+.menu li.active > a {
+  background: #e8efff;
+  color: var(--color-primary);
+  box-shadow: inset 0 0 0 1px #c9d8ff;
+}
+
+/* ============================================
+   LAYOUT - MAIN CONTENT
+   ============================================ */
+main {
+    max-width: 1160px;
+    margin: 1.75rem auto 2.5rem;
+    padding: 0 1.25rem;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid #dddddd;
+  background: var(--color-surface);
+  color: #666666;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+h1 {
+    color: var(--color-text);
+    font-family: "montserrat-bold", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 2.15rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    color: var(--color-text);
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin-bottom: 0.9rem;
+}
+
+h3 {
+    color: var(--color-text);
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.35;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--color-text);
+    line-height: 1.72;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   ACCORDION
+   ============================================ */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.accordion-item {
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.accordion-header {
+    width: 100%;
+    background: #f9fafb;
+    border: none;
+    padding: 16px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-text);
+}
+
+.accordion-header:hover {
+    background: #eef2ff;
+}
+
+.accordion-header .icon {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: var(--color-surface);
+}
+
+.accordion-body.open {
+    padding: 16px 20px;
+}
+
+.accordion-body ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.accordion-body li {
+    margin-bottom: 8px;
+}
+
+.accordion-body a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.accordion-body a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   ABOUT PAGE
+   ============================================ */
+.about-page {
+    max-width: 100%;
+}
+
+.about-hero {
+    margin-bottom: 2.5rem;
+}
+
+.about-kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-bottom: 0.4rem;
+}
+
+.about-hero h1 {
+    font-size: 2rem;
+    margin: 0 0 0.75rem;
+    color: #111827;  /* EKSPLICITNO CRNA BOJA - rešava problem sa plavom */
+    font-weight: 700;
+}
+
+.about-lead {
+    max-width: 48rem;
+    font-size: 1.02rem;
+    color: #4b5563;
+    line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.about-section {
+    margin-bottom: 2.5rem;
+}
+
+.about-section p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
+.about-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.9rem;
+    color: #111827;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+}
+
+.about-card {
+    background: #ffffff;
+    border-radius: 0.9rem;
+    padding: 1.25rem 1.3rem;
+    border: 1px solid #e5e7eb;
+}
+
+.about-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+    font-size: 1.05rem;
+    color: #111827;
+}
+
+.about-card p {
+    color: #4b5563;
+    font-size: 0.95rem;
+}
+
+.about-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.about-card-link:hover {
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+    border-color: #c7d2fe;
+}
+
+.about-people {
+    display: grid;
+    grid-template-columns: 1.6fr 1.2fr;
+    gap: 1.5rem;
+}
+
+.about-director {
+    background: #0f172a;
+    color: #e5e7eb;
+    border-radius: 0.9rem;
+    padding: 1.25rem 1.4rem;
+}
+
+.about-director h3 {
+    color: #e5e7eb;
+    margin-bottom: 0.5rem;
+}
+
+.about-director-name {
+    font-weight: 600;
+    margin: 0.2rem 0 0.5rem;
+    font-size: 1.05rem;
+    color: #f9fafb;
+}
+
+.about-director-note {
+    font-size: 0.95rem;
+    color: #cbd5f5;
+}
+
+/* Читљивост у тамној картици: сви текстови светли */
+.about-director,
+.about-director p {
+    color: #f1f5f9;
+}
+
+/* ============================================
+   RESPONSIVE – таблет и мањи
+   ============================================ */
+@media (max-width: 1024px) {
+  main {
+    margin: 1.25rem auto 2rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  main {
+    margin: 1rem auto 1.5rem;
+    padding: 0 0.75rem;
+    border-radius: 0;
+  }
+
+  .top-nav {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0;
+    padding: 0.58rem 1rem;
+  }
+
+  .top-nav .brand {
+    max-width: calc(100% - 3.25rem);
+  }
+
+  .brand-logo {
+    width: 152px;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #e2e8f0;
+    gap: 0.25rem;
+  }
+
+  .site-header.nav-open .menu {
+    display: flex;
+  }
+
+  .menu a {
+    display: block;
+    padding: 0.7rem 0.9rem;
+    border-radius: 8px;
+    min-height: 2.75rem;
+    box-sizing: border-box;
+  }
+
+  .menu a:hover {
+    background: #e5e7eb;
+  }
+
+  .about-people {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Веома мали екрани (телефон у портрету) */
+@media (max-width: 480px) {
+  main {
+    margin: 0.75rem auto 1.25rem;
+    padding: 0 0.5rem;
+  }
+
+  .top-nav {
+    padding: 0.5rem 0.7rem;
+  }
+
+  .top-nav .brand {
+    max-width: calc(100% - 3.25rem);
+  }
+
+  .brand-logo {
+    width: 124px;
+  }
+}
+/* ============================================
+   HOME PAGE
+   ============================================ */
+   .home-page {
+    max-width: 100%;
+  }
+
+  .home-page > section {
+    margin-bottom: 3.25rem;
+  }
+  
+  /* Hero sekcija */
+  .hero {
+    background: linear-gradient(135deg, var(--color-primary-strong) 0%, #1e2f57 100%);
+    border-radius: 20px;
+    padding: 4rem 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #f9fafb;
+    margin-top: 0.75rem;
+  }
+  
+  .hero-content {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #f9fafb;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+    line-height: 1.58;
+    max-width: 64ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Dugmad */
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+  }
+  
+  .hero .btn-primary {
+    background: var(--color-surface);
+    color: var(--color-primary-strong);
+  }
+
+  .hero .btn-primary:visited {
+    color: #0f172a;
+  }
+  
+  .hero .btn-primary:hover {
+    background: #e2e8f0;
+    color: var(--color-primary-strong);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(249, 250, 251, 0.3);
+    text-decoration: none;
+  }
+  
+  .hero .btn-secondary {
+    background: transparent;
+    color: var(--color-surface);
+    border: 2px solid var(--color-surface);
+  }
+
+  .hero .btn-secondary:visited {
+    color: var(--color-surface);
+  }
+  
+  .hero .btn-secondary:hover {
+    background: rgba(249, 250, 251, 0.1);
+    color: #f9fafb;
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+  .hero .btn:focus-visible {
+    outline: 2px solid rgba(248, 250, 252, 0.9);
+    outline-offset: 3px;
+    box-shadow: none;
+  }
+  
+  /* Sekcije */
+  .section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.55rem;
+    text-align: center;
+    color: var(--color-text);
+  }
+  
+  /* Quick links - kartice */
+  .quick-links {
+    margin-bottom: 2.5rem;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .service-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    display: block;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-primary-strong);
+    text-decoration: none;
+  }
+  
+  .service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .service-card h3 {
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-card p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+  
+  /* Delatnosti grid */
+  .activities {
+    margin-bottom: 2rem;
+  }
+  
+  .activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .activity-item {
+    background: #ffffff;
+    border-left: 4px solid #0f172a;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.2s ease;
+  }
+  
+  .activity-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateX(4px);
+  }
+  
+  .activity-item h3 {
+    color: #111827;
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .activity-item p {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  /* Responsive – таблет */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 2.5rem 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 14px;
+    }
+
+    .hero-title {
+      font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+
+    .hero-cta {
+      flex-direction: column;
+    }
+
+    .btn {
+      width: 100%;
+      text-align: center;
+    }
+
+    .services-grid,
+    .activities-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+    }
+
+    .quick-links {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  /* Телефон */
+  @media (max-width: 480px) {
+    .hero {
+      padding: 1.75rem 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 12px;
+    }
+
+    .hero-title {
+      font-size: 1.4rem;
+    }
+
+    .hero-subtitle {
+      font-size: 0.93rem;
+      line-height: 1.5;
+    }
+
+    .services-grid {
+      gap: 1rem;
+    }
+
+    .service-card {
+      padding: 1.5rem 1.25rem;
+    }
+  }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+  .page-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #e5e7eb;
+  }
+  
+  .page-header h1 {
+    font-size: 2.15rem;
+    margin-bottom: 0.5rem;
+    color: #111827;
+  }
+  
+  .page-description {
+    color: #6b7280;
+    font-size: 1.05rem;
+    margin: 0;
+  }
+  /* ========== OBAVEŠTENJA - Modernizovano ========== */
+.obavestenja-section {
+  margin-bottom: 2.25rem;
+}
+
+.obavestenja-archive-wrap {
+  margin-top: 1.75rem;
+  text-align: center;
+}
+
+.btn-archive {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  min-height: 2.75rem;
+  box-sizing: border-box;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: #4f46e5;
+  border: 2px solid #4f46e5;
+  background: transparent;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-archive:hover {
+  background: #4f46e5;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.obavestenja-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.75rem;
+}
+
+.obavestenje-card {
+  background: var(--color-surface);
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+.obavestenje-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-color: #cbd5e1;
+}
+
+.obavestenje-card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.obavestenje-card-image-wrap {
+  aspect-ratio: 16 / 10;
+  background: #f1f5f9;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.obavestenje-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.obavestenje-card:hover .obavestenje-card-image {
+  transform: scale(1.05);
+}
+
+.obavestenje-card-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+}
+
+.obavestenje-card-placeholder-icon {
+  font-size: 3rem;
+  opacity: 0.6;
+}
+
+.obavestenje-card-body {
+  padding: 1.25rem 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.obavestenje-date {
+  display: block;
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.obavestenje-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 0.75rem;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.obavestenje-excerpt {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0 0 1rem;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.obavestenje-more {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-top: auto;
+}
+
+.obavestenje-card:hover .obavestenje-more {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .obavestenja-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  
+  .obavestenje-card-body {
+    padding: 1rem 1.25rem;
+  }
+}
+/* ========== NEWS PAGE ========== */
+.news-page {
+  max-width: 100%;
+}
+
+.news-article {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.news-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.news-header h1 {
+  font-size: 2.15rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.news-date {
+  display: block;
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 0.5rem;
+}
+
+.news-summary {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  text-align: justify;
+}
+
+.news-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.news-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.news-content {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #334155;
+  margin-top: 2rem;
+}
+
+.news-content p {
+  margin-bottom: 1rem;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+.news-thumb {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* Lightbox overlay */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+#lightbox-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 8px;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  background: rgba(15, 23, 42, 0.7);
+  border: none;
+  color: #f9fafb;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+}
+
+.lightbox-close {
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.lightbox-prev {
+  left: 2rem;
+}
+
+.lightbox-next {
+  right: 2rem;
+}
+.btn-primary {
+  display: inline-block;
+  padding: 0.6rem 1.3rem;
+  border-radius: 999px;
+  background: #111827;
+  color: #f9fafb;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: #020617;
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.btn-outline-light {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  color: #f9fafb;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.btn-outline-light:hover {
+  background: rgba(249, 250, 251, 0.08);
+  text-decoration: none;
+}
+
+.link-small {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+.person-block {
+  margin-bottom: 0.75rem;
+}
+
+.bio-trigger {
+  margin-top: 0.55rem;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--color-accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bio-trigger:hover {
+  background: #eff6ff;
+  border-color: #93c5fd;
+}
+
+.bio-trigger-dark {
+  background: rgba(15, 23, 42, 0.3);
+  color: #bfdbfe;
+  border-color: rgba(148, 163, 184, 0.55);
+}
+
+.bio-trigger-dark:hover {
+  background: rgba(30, 41, 59, 0.6);
+}
+
+.bio-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease;
+}
+
+.bio-modal[hidden] {
+  display: none;
+}
+
+.bio-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.bio-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.6);
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+
+.bio-modal.is-open .bio-modal-backdrop {
+  opacity: 1;
+}
+
+.bio-modal-dialog {
+  position: relative;
+  max-width: 760px;
+  margin: 4rem auto 1rem;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 24px 60px rgba(2, 6, 23, 0.28);
+  padding: 1.35rem 1.35rem 1.2rem;
+  max-height: calc(100vh - 5rem);
+  overflow: auto;
+  transform: translateY(10px) scale(0.98);
+  opacity: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.bio-modal.is-open .bio-modal-dialog {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.bio-modal-close {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.65rem;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: transparent;
+  color: #0f172a;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.bio-modal-close:hover {
+  color: #1d4ed8;
+}
+
+.bio-modal-title {
+  margin: 0 2rem 0.25rem 0;
+}
+
+.bio-modal-role {
+  margin: 0 0 0.9rem;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.bio-modal-content p {
+  margin: 0 0 0.75rem;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.person-role {
+  font-size: 0.85rem;
+  color: #e5e7eb;
+  margin-bottom: 0.25rem;
+}
+
+.person-separator {
+  border: 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.4);
+  margin: 0.75rem 0;
+}
+
+/* ============================================
+   USLUGE PAGE
+   ============================================ */
+.usluge-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.usluge-hero {
+  margin-bottom: 2rem;
+}
+
+.usluge-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 0.4rem;
+}
+
+.usluge-hero h1 {
+  font-size: 2.15rem;
+  margin: 0 0 0.75rem;
+}
+
+.usluge-lead {
+  font-size: 1.02rem;
+  color: #4b5563;
+}
+
+.usluge-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.usluge-nav a {
+  color: #4f46e5;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.usluge-nav a:hover {
+  text-decoration: underline;
+}
+
+.usluge-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.usluge-section:last-of-type {
+  border-bottom: none;
+}
+
+.usluge-section h2 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.usluge-section p {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 0.75rem;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.usluge-section a {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+.usluge-section a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   CONTACT PAGE
+   ============================================ */
+.contact-page {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.contact-hero {
+  margin-bottom: 2.5rem;
+}
+
+.contact-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 0.4rem;
+}
+
+.contact-hero h1 {
+  font-size: 2.15rem;
+  margin: 0 0 0.75rem;
+}
+
+.contact-lead {
+  max-width: 42rem;
+  font-size: 1.02rem;
+  color: var(--color-text-muted);
+}
+
+.contact-reklamacije {
+  margin-bottom: 1.5rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-card {
+  background: var(--color-surface);
+  border-radius: 0.9rem;
+  padding: 1.4rem 1.5rem;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+.contact-card h2 {
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.contact-map {
+  margin-bottom: 1.5rem;
+}
+
+.contact-map h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-map p {
+  max-width: 42rem;
+}
+.map-embed iframe {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+}
+
+/* ============================================
+   SKIP LINK & FOCUS
+   ============================================ */
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: #0f172a;
+  color: #f9fafb;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+  z-index: 100;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: #64748b;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}
+
+.site-footer a {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   ARHIVA OBAVEŠTENJA
+   ============================================ */
+.arhiva-page {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.arhiva-hero {
+  margin-bottom: 2rem;
+}
+
+.arhiva-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 0.4rem;
+}
+
+.arhiva-hero h1 {
+  font-size: 2.15rem;
+  margin: 0 0 0.75rem;
+}
+
+.arhiva-lead {
+  font-size: 1.02rem;
+  color: #4b5563;
+}
+
+.arhiva-lead a {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+.arhiva-lead a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   DOKUMENTI HUB PAGE
+   ============================================ */
+.dokumenti-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.dokumenti-hero {
+  margin-bottom: 2rem;
+}
+
+.dokumenti-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 0.4rem;
+}
+
+.dokumenti-hero h1 {
+  font-size: 2.15rem;
+  margin: 0 0 0.75rem;
+}
+
+.dokumenti-lead {
+  font-size: 1.02rem;
+  color: #4b5563;
+}
+
+.dokumenti-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.dokumenti-card {
+  min-height: 0;
+}
+
+/* ============================================
+   404 NOT FOUND
+   ============================================ */
+.not-found-page {
+  max-width: 480px;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.not-found-page h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.not-found-page p {
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================
+   RESPONSIVE – унутрашње странице (контакт, услуге, документи, архива)
+   ============================================ */
+@media (max-width: 768px) {
+  .contact-page,
+  .usluge-page,
+  .dokumenti-page,
+  .arhiva-page {
+    padding: 0 0.25rem;
+  }
+
+  .contact-hero h1,
+  .usluge-hero h1,
+  .dokumenti-hero h1,
+  .arhiva-hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .contact-lead,
+  .usluge-lead,
+  .dokumenti-lead,
+  .arhiva-lead {
+    font-size: 0.95rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .contact-card {
+    padding: 1.25rem 1.25rem;
+  }
+
+  .contact-reklamacije {
+    margin-bottom: 1.25rem;
+  }
+
+  .map-embed iframe {
+    min-height: 280px;
+  }
+
+  .usluge-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem 0;
+  }
+
+  .usluge-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .usluge-section h2 {
+    font-size: 1.15rem;
+  }
+
+  .dokumenti-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .not-found-page {
+    margin: 1.5rem 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .not-found-page h1 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero h1,
+  .usluge-hero h1,
+  .dokumenti-hero h1,
+  .arhiva-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .bio-modal-dialog {
+    margin: 1rem 0.6rem;
+    padding: 1.1rem 1rem 1rem;
+    max-height: calc(100vh - 2rem);
+  }
+
+  .lightbox-prev {
+    left: 0.5rem;
+  }
+
+  .lightbox-next {
+    right: 0.5rem;
+  }
+
+  .lightbox-close {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}

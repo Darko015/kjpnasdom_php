@@ -10,6 +10,7 @@ $urls = [
     '/usluge',
     '/dokumenti',
     '/program-poslovanja',
+    '/izvestaji-poslovanja',
     '/javne-nabavke',
     '/kontakt',
     '/arhiva-obavestenja',

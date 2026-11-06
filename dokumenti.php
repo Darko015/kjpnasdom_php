@@ -15,7 +15,7 @@ render_header(
         <p class="dokumenti-kicker">Документи</p>
         <h1>Документи</h1>
         <p class="dokumenti-lead">
-            Програми пословања и документи о јавним набавкама КЈП „Наш дом“ Лозница.
+            Програми пословања, извештаји о пословању и јавне набавке КЈП „Наш дом“ Лозница.
         </p>
     </header>
 
@@ -24,6 +24,11 @@ render_header(
             <div class="service-icon">📄</div>
             <h3>Програм пословања</h3>
             <p>Преглед докумената и планова пословања по годинама</p>
+        </a>
+        <a href="/izvestaji-poslovanja" class="service-card dokumenti-card">
+            <div class="service-icon">📊</div>
+            <h3>Извештаји о пословању</h3>
+            <p>Квартални извештаји и извештаји независног ревизора, 2021–2026</p>
         </a>
         <a href="/javne-nabavke" class="service-card dokumenti-card">
             <div class="service-icon">📋</div>

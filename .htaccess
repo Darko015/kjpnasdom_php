@@ -3,9 +3,11 @@ DirectoryIndex index.php
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    RewriteRule ^SAJT - [F,L]
     RewriteRule ^vesti/([A-Za-z0-9_-]+)/?$ vesti.php?slug=$1 [L,QSA]
     RewriteRule ^arhiva-obavestenja/?$ arhiva-obavestenja.php [L,QSA]
     RewriteRule ^program-poslovanja/?$ program-poslovanja.php [L,QSA]
+    RewriteRule ^izvestaji-poslovanja/?$ izvestaji-poslovanja.php [L,QSA]
     RewriteRule ^javne-nabavke/?$ javne-nabavke.php [L,QSA]
     RewriteRule ^dokumenti/?$ dokumenti.php [L,QSA]
     RewriteRule ^o-preduzecu/?$ o-preduzecu.php [L,QSA]

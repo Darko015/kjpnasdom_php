@@ -4,6 +4,7 @@ declare(strict_types=1);
 const SITE_NAME = 'КЈП „Наш дом“ Лозница';
 const NEWS_DIR = __DIR__ . '/../static/media/vesti';
 const PROGRAM_DIR = __DIR__ . '/../static/media/program_poslovanja';
+const REPORT_DIR = __DIR__ . '/../static/media/izvestaji_poslovanja';
 const PROCUREMENT_DIR = __DIR__ . '/../static/media/javne_nabavke';
 const UPRAVA_JSON = __DIR__ . '/../static/media/data/uprava.json';
 
@@ -155,6 +156,7 @@ function load_year_documents(string $baseDir): array
                 'title' => $meta[$filename] ?? pathinfo($filename, PATHINFO_FILENAME),
                 'url' => public_media_url($path),
                 'extension' => strtoupper($ext),
+                'file' => $filename,
             ];
         }
 
@@ -163,7 +165,7 @@ function load_year_documents(string $baseDir): array
         }
 
         usort($files, static function (array $a, array $b): int {
-            return strcasecmp($a['title'], $b['title']);
+            return strnatcasecmp($a['file'], $b['file']);
         });
         $years[] = ['year' => $year, 'files' => $files];
     }

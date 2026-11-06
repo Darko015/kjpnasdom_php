@@ -792,6 +792,10 @@ li {
     font-size: 1.05rem;
     margin: 0;
   }
+
+  .page-extra {
+    margin: 1rem 0 0;
+  }
   /* ========== OBAVEŠTENJA - Modernizovano ========== */
 .obavestenja-section {
   margin-bottom: 2.25rem;

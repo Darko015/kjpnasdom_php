@@ -9,6 +9,7 @@ if ($requestPath !== '/' && $requestPath !== '/index.php') {
     $directRoutes = [
         '/arhiva-obavestenja' => 'arhiva-obavestenja.php',
         '/program-poslovanja' => 'program-poslovanja.php',
+        '/izvestaji-poslovanja' => 'izvestaji-poslovanja.php',
         '/javne-nabavke' => 'javne-nabavke.php',
         '/dokumenti' => 'dokumenti.php',
         '/o-preduzecu' => 'o-preduzecu.php',
@@ -64,7 +65,7 @@ render_header(
     <section class="about-section">
         <h2 class="section-title">О предузећу</h2>
         <p>
-            Скупштина општине Лозница је 23. новембра 1965. године донела одлуку о оснивању предузећа за газдовање стамбеним зградама у друштвеној својини под називом СП „Наш дом“. Током развоја и организационих промена предузеће је наставило пословање као КЈП „Наш дом“.
+            Скупштина општине Лозница је 24. новембра 1965. године донела решење о оснивању предузећа за газдовање стамбеним зградама у друштвеној својини под називом СП „Наш дом“. Током развоја и организационих промена предузеће је наставило пословање као КЈП „Наш дом“.
         </p>
         <p>
             Данас предузеће обавља комуналне делатности које су важне за свакодневни живот грађана и функционисање града. Детаљније информације о организацији и управљању доступне су на страници <a href="/o-preduzecu">О предузећу</a>.
@@ -90,6 +91,12 @@ render_header(
                 <div class="service-icon">📄</div>
                 <h3>Програм пословања</h3>
                 <p>Преглед докумената и планова пословања по годинама</p>
+            </a>
+
+            <a href="/izvestaji-poslovanja" class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Извештаји о пословању</h3>
+                <p>Квартални извештаји и извештаји ревизора, 2021–2026</p>
             </a>
 
             <a href="/javne-nabavke" class="service-card">

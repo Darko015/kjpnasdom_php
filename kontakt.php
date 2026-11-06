@@ -22,29 +22,57 @@ render_header(
     <section class="contact-reklamacije contact-card">
         <h2>Рекламације</h2>
         <p>
-            Рекламације у вези са пруженим комуналним услугама можете поднети писменим путем, е-поштом или лично у управи предузећа односно корисничком сервису.
+            Рекламације на комуналне услуге можете поднети бесплатном телефонском линијом, е-поштом или лично.
+        </p>
+        <p>
+            <a href="/static/media/dokumenti/23.960_Pravilnik_reklamacije.pdf" target="_blank" rel="noopener">Правилник о условима и начину решавања рекламација потрошача (PDF)</a>
         </p>
     </section>
 
     <section class="contact-grid">
         <div class="contact-card">
             <h2>Управа предузећа</h2>
-            <p><strong>Адреса:</strong><br>КЈП „Наш дом“ Лозница<br>Булевар Доситеја Обрадовића 6<br>15300 Лозница, Србија</p>
-            <p><strong>Телефон:</strong><br><a href="tel:+381157882291">(015) 7882 291</a></p>
-            <p><strong>Факс:</strong><br><a href="tel:+381157882291">(015) 7882 291</a></p>
+            <p><strong>Адреса:</strong><br>КЈП „Наш дом“, управна зграда<br>Булевар Доситеја Обрадовића бр. 6<br>15300 Лозница</p>
+            <p><strong>Централа:</strong><br><a href="tel:+381157882291">015/7882-291</a></p>
             <p><strong>E-mail:</strong><br><a href="mailto:kjpnasdomloznica@gmail.com">kjpnasdomloznica@gmail.com</a></p>
-            <p><strong>Радно време управе:</strong><br>Понедељак-петак: 07:00-15:00</p>
-            <p><strong>Робна пијаца и ресторан:</strong><br><a href="tel:+38115882342">(015) 882 342</a></p>
-            <p><strong>Зелена пијаца:</strong><br><a href="tel:+38115889386">(015) 889 386</a></p>
-            <p><strong>Градско гробље:</strong><br><a href="tel:+38115872030">(015) 872 030</a></p>
+            <p><strong>Радно време управе:</strong><br>Понедељак–петак: 07:00–15:00</p>
         </div>
 
         <div class="contact-card">
-            <h2>Кориснички сервис</h2>
-            <p>За пријаву кварова, рекламација и информације о рачунима:</p>
+            <h2>Пријем рекламација</h2>
+            <p>Бесплатна телефонска линија за рекламације на комуналне услуге.</p>
             <p><strong>Телефон:</strong><br><a href="tel:0800001005">0800 001 005</a></p>
-            <p><strong>E-mail:</strong><br><a href="mailto:marijana.nasdom@gmail.com">marijana.nasdom@gmail.com</a></p>
-            <p><strong>Радно време:</strong><br>Понедељак-петак: 07:00-19:00<br>Субота: 08:00-13:00</p>
+            <p><strong>E-mail:</strong><br><a href="mailto:marijananasdom@gmail.com">marijananasdom@gmail.com</a><br><a href="mailto:acomarinkonasdom@gmail.com">acomarinkonasdom@gmail.com</a></p>
+            <p><strong>Радно време:</strong><br>Понедељак–петак: 07:00–19:00<br>Субота: 08:00–13:00</p>
+        </div>
+
+        <div class="contact-card">
+            <h2>Пијаца — Лозница</h2>
+            <p><strong>Адреса:</strong><br>Слободана Пенезића бб<br>15300 Лозница</p>
+            <p><strong>Телефон:</strong><br><a href="tel:+381157889386">015/7889-386</a></p>
+        </div>
+
+        <div class="contact-card">
+            <h2>Пијаца и ресторан — Клупци</h2>
+            <p><strong>Адреса:</strong><br>Ратарска бб<br>15301 Клупци</p>
+            <p><strong>Телефон:</strong><br><a href="tel:+381157882342">015/7882-342</a></p>
+        </div>
+
+        <div class="contact-card">
+            <h2>Погребне услуге — Лозница</h2>
+            <p><strong>Адреса:</strong><br>Луке Стевића бб<br>15300 Лозница</p>
+            <p><strong>Телефон:</strong><br><a href="tel:+38115872030">015/872-030</a></p>
+        </div>
+
+        <div class="contact-card">
+            <h2>Погребне услуге — Бања Ковиљача</h2>
+            <p><strong>Адреса:</strong><br>Филипа Кљајића бб (Бањски парк)<br>15316 Бања Ковиљача</p>
+            <p><strong>Телефон:</strong><br><a href="tel:+381608870241">060/887-0241</a></p>
+        </div>
+
+        <div class="contact-card">
+            <h2>Зоохигијена</h2>
+            <p><strong>Телефон:</strong><br><a href="tel:+381157882291">015/7882-291</a> (централа)</p>
         </div>
     </section>
 

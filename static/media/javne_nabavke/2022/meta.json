@@ -1,3 +1,96 @@
 {
-    "Plan javnih nabavki 2022.pdf": "План јавних набавки за 2022. годину"
+  "Planjavnihnabavki2022.pdf": "План јавних набавки за 2022. годину",
+  "izmena_plana_JN_2022_v2.pdf": "Измењена верзија Плана јавних набавки за 2022. године (верзија 2)",
+  "links": [
+    {
+      "title": "Електрична енергија",
+      "date": "24.01.2022",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/65267"
+    },
+    {
+      "title": "Храна за псе",
+      "date": "07.02.2022",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/66178"
+    },
+    {
+      "title": "Услуге уступања људских ресурса",
+      "date": "09.02.2022",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/64756"
+    },
+    {
+      "title": "Ветеринарске услуге",
+      "date": "17.02.2022",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/67749"
+    },
+    {
+      "title": "Погонско гориво и моторна уља",
+      "date": "21.02.2022",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/65326"
+    },
+    {
+      "title": "Косачице за траву, тримери и др. за потребе Службе зеленила",
+      "date": "07.03.2022",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/69981"
+    },
+    {
+      "title": "Закуп грађевинске машине са руковаоцем — багера гусеничара",
+      "date": "08.03.2022",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/70046"
+    },
+    {
+      "title": "Природни шљунак",
+      "date": "09.03.2022",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/70328"
+    },
+    {
+      "title": "Превоз непропусног материјала — глине",
+      "date": "09.03.2022",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/70300"
+    },
+    {
+      "title": "Резервни делови, алати и потрошни материјал за Службу градског зеленила",
+      "date": "21.03.2022",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/72792"
+    },
+    {
+      "title": "Расад цвећа, садни материјал и репроматеријал за расадништво",
+      "date": "23.03.2022",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/72393"
+    },
+    {
+      "title": "Услуге мобилне телефоније",
+      "date": "28.03.2022",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/74067"
+    },
+    {
+      "title": "Средства личне и колективне заштите",
+      "date": "06.06.2022",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/88854"
+    },
+    {
+      "title": "Услуге осигурања",
+      "date": "27.06.2022",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/93450"
+    },
+    {
+      "title": "Поновљени поступак за партију 2 — моторна уља и мазива",
+      "date": "30.06.2022",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/94143"
+    },
+    {
+      "title": "Материјал за одржавање",
+      "date": "11.07.2022",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/96275"
+    },
+    {
+      "title": "Резервни ауто делови",
+      "date": "17.10.2022",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/115356"
+    },
+    {
+      "title": "Услуге осигурања",
+      "date": "04.01.2023",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/130986"
+    }
+  ]
 }

@@ -1,36 +1,51 @@
 document.addEventListener("DOMContentLoaded", function () {
     const headers = document.querySelectorAll(".accordion-header");
 
-    headers.forEach(header => {
+    headers.forEach((header) => {
         header.addEventListener("click", () => toggle(header));
     });
 
-    // 🔥 AUTO OPEN PRVE (NAJNOVIJE) GODINE
     if (headers.length > 0) {
         toggle(headers[0]);
+    }
+
+    function setOpenHeight(body) {
+        body.style.maxHeight = "none";
+        const height = body.scrollHeight;
+        body.style.maxHeight = height + "px";
     }
 
     function toggle(header) {
         const body = header.nextElementSibling;
         const icon = header.querySelector(".icon");
-
         const isOpen = body.classList.contains("open");
 
-        document.querySelectorAll(".accordion-body").forEach(b => {
-            b.classList.remove("open");
-            b.style.maxHeight = null;
+        document.querySelectorAll(".accordion-header").forEach((btn) => {
+            btn.setAttribute("aria-expanded", "false");
         });
 
-        document.querySelectorAll(".icon").forEach(i => {
-            i.textContent = "+";
+        document.querySelectorAll(".accordion-body").forEach((panel) => {
+            panel.classList.remove("open");
+            panel.style.maxHeight = null;
+        });
+
+        document.querySelectorAll(".accordion-header .icon").forEach((mark) => {
+            mark.textContent = "+";
         });
 
         if (!isOpen) {
             body.classList.add("open");
-            body.style.maxHeight = body.scrollHeight + "px";
-            icon.textContent = "−";
+            setOpenHeight(body);
+            header.setAttribute("aria-expanded", "true");
+            if (icon) {
+                icon.textContent = "−";
+            }
         }
     }
+
+    window.addEventListener("resize", function () {
+        document.querySelectorAll(".accordion-body.open").forEach(setOpenHeight);
+    });
 });
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -10,11 +10,14 @@ render_header(
 );
 ?>
 
-<section class="page-header">
-    <h1>Извештаји о пословању</h1>
-    <p class="page-description">Квартални извештаји и извештаји независног ревизора, 2021–2026.</p>
-</section>
+<section class="docs-page">
+    <header class="docs-hero">
+        <p class="docs-kicker">Документи</p>
+        <h1>Извештаји о пословању</h1>
+        <p class="docs-lead">Квартални извештаји и извештаји независног ревизора, 2021–2026.</p>
+    </header>
 
-<?php render_accordion(load_year_documents(REPORT_DIR)); ?>
+    <?php render_accordion(load_year_documents(REPORT_DIR)); ?>
+</section>
 
 <?php render_footer(); ?>

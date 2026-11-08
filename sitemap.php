@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 require __DIR__ . '/app/functions.php';
 
-$base = 'https://www.kjpnasdom.rs';
+$base = SITE_URL;
 $urls = [
     '/',
     '/o-preduzecu',

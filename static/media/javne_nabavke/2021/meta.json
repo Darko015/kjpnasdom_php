@@ -1,3 +1,90 @@
 {
-    "plan.pdf": "План јавних набавки за 2021. годину"
+  "plan_JN_2021.pdf": "План јавних набавки за 2021. годину",
+  "links": [
+    {
+      "title": "Електрична енергија",
+      "date": "22.01.2021",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/12749"
+    },
+    {
+      "title": "Резервни делови, алати и потрошни материјал за Службу зеленила",
+      "date": "08.02.2021",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/13847"
+    },
+    {
+      "title": "Уступање људских ресурса",
+      "date": "08.02.2021",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/12421"
+    },
+    {
+      "title": "Храна за псе",
+      "date": "18.02.2021",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/14837"
+    },
+    {
+      "title": "Погонско гориво и моторна уља",
+      "date": "04.03.2021",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/14345"
+    },
+    {
+      "title": "Контејнери",
+      "date": "09.03.2021",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/16883"
+    },
+    {
+      "title": "Расад цвећа, садни материјал и репроматеријал за расадништво",
+      "date": "12.03.2021",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/17395"
+    },
+    {
+      "title": "Закуп грађевинске машине",
+      "date": "31.03.2021",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/20262"
+    },
+    {
+      "title": "Природни шљунак",
+      "date": "01.04.2021",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/20404"
+    },
+    {
+      "title": "Превоз непропусног материјала",
+      "date": "05.04.2021",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/20564"
+    },
+    {
+      "title": "Резервни делови за грађевинску машину са услугом уградње",
+      "date": "14.04.2021",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/23047"
+    },
+    {
+      "title": "Средства личне и колективне заштите",
+      "date": "08.06.2021",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/30700"
+    },
+    {
+      "title": "Материјал за одржавање",
+      "date": "30.06.2021",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/25211"
+    },
+    {
+      "title": "Услуге осигурања",
+      "date": "12.07.2021",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/36157"
+    },
+    {
+      "title": "Резервни ауто делови",
+      "date": "11.10.2021",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/48350"
+    },
+    {
+      "title": "Косачице за траву, тримери и др. за потребе Службе зеленила",
+      "date": "29.11.2021",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/56239"
+    },
+    {
+      "title": "Услуге осигурања / осигурање имовине",
+      "date": "28.12.2021",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/61369"
+    }
+  ]
 }

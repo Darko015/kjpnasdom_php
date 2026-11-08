@@ -1,6 +1,98 @@
 {
-    "Одлука о усвајању плана ЈН за 2025.год..pdf": "План јавних набавки за 2025. године",
-    "izmena_1_JN_za_2025.pdf": "Прва измена Плана јавних набавки за 2025. године",
-    "izmena_2_JN_za_2025.pdf": "Друга измена Плана јавних набавки за 2025. године",
-    "plan.pdf": "Трећа измена Плана јавних набавки за 2025. године"
+  "Одлука о усвајању плана ЈН за 2025.год..pdf": "Одлука о усвајању Плана јавних набавки за 2025. године",
+  "plan.pdf": "План јавних набавки за 2025. године",
+  "Izmena plana JN za 2025. I izmena.pdf": "Прва измена Плана јавних набавки за 2025. године",
+  "IZMENA JN 2025.pdf": "Друга измена Плана јавних набавки за 2025. године",
+  "links": [
+    {
+      "title": "Услуге осигурања",
+      "date": "17.01.2025",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/275976"
+    },
+    {
+      "title": "Расад цвећа, садни материјал и репроматеријал за расадништво",
+      "date": "10.02.2025",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/278044"
+    },
+    {
+      "title": "Ауто гуме",
+      "date": "18.02.2025",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/279302"
+    },
+    {
+      "title": "Електрична енергија",
+      "date": "04.04.2025",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/288565"
+    },
+    {
+      "title": "Резервни делови, алати и потрошни материјал за службу зеленила",
+      "date": "14.04.2025",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/291186"
+    },
+    {
+      "title": "Уступање људских ресурса",
+      "date": "05.05.2025",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/290493"
+    },
+    {
+      "title": "Ветеринарске услуге",
+      "date": "12.05.2025",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/296245"
+    },
+    {
+      "title": "Закуп грађевинске машине",
+      "date": "23.05.2025",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/298101"
+    },
+    {
+      "title": "Превоз непропусног материјала — глина",
+      "date": "23.05.2025",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/298097"
+    },
+    {
+      "title": "Природни шљунак",
+      "date": "23.05.2025",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/298057"
+    },
+    {
+      "title": "Косачице за траву, тримери и др. за потребе службе зеленила",
+      "date": "16.06.2025",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/302817"
+    },
+    {
+      "title": "Погонско гориво и моторна уља",
+      "date": "17.06.2025",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/298377"
+    },
+    {
+      "title": "Средства личне и колективне заштите",
+      "date": "24.06.2025",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/304826"
+    },
+    {
+      "title": "Услуге осигурања",
+      "date": "24.07.2025",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/310084"
+    },
+    {
+      "title": "Материјал за одржавање",
+      "date": "17.09.2025",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/318825"
+    },
+    {
+      "title": "Храна за псе",
+      "date": "03.10.2025",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/322428"
+    },
+    {
+      "title": "Резервни ауто делови",
+      "date": "01.12.2025",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/332967"
+    },
+    {
+      "title": "Грађевинска механизација, ремонт машина и спец. надоградња камиона, камион цистерна",
+      "date": "22.12.2025",
+      "url": "https://jnportal.ujn.gov.rs/tender-eo/339282"
+    }
+  ]
 }

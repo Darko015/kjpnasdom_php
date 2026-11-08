@@ -51,7 +51,7 @@ render_header(
 <section class="home-page">
     <div class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">КЈП „Наш дом" Лозница</h1>
+            <h1 class="hero-title">КЈП „Наш дом“ Лозница</h1>
             <p class="hero-subtitle">
                 Комунално јавно предузеће које пружа услуге од општег интереса за град Лозницу: чистоћа, одржавање јавних површина и зеленила, зимска служба, пијачне и погребне услуге, као и послови зоохигијене.
             </p>
@@ -88,31 +88,31 @@ render_header(
         <h2 class="section-title">Документи и важне информације</h2>
         <div class="services-grid">
             <a href="/program-poslovanja" class="service-card">
-                <div class="service-icon">📄</div>
+                <div class="service-icon service-icon-doc" aria-hidden="true"></div>
                 <h3>Програм пословања</h3>
                 <p>Преглед докумената и планова пословања по годинама</p>
             </a>
 
             <a href="/izvestaji-poslovanja" class="service-card">
-                <div class="service-icon">📊</div>
+                <div class="service-icon service-icon-chart" aria-hidden="true"></div>
                 <h3>Извештаји о пословању</h3>
                 <p>Квартални извештаји и извештаји ревизора, 2021–2026</p>
             </a>
 
             <a href="/javne-nabavke" class="service-card">
-                <div class="service-icon">📋</div>
+                <div class="service-icon service-icon-list" aria-hidden="true"></div>
                 <h3>Јавне набавке</h3>
                 <p>Документи и информације о јавним набавкама</p>
             </a>
 
             <a href="/o-preduzecu" class="service-card">
-                <div class="service-icon">ℹ️</div>
+                <div class="service-icon service-icon-info" aria-hidden="true"></div>
                 <h3>О предузећу</h3>
                 <p>Историја, делатности и управљање предузећем</p>
             </a>
 
             <a href="/kontakt" class="service-card">
-                <div class="service-icon">📞</div>
+                <div class="service-icon service-icon-phone" aria-hidden="true"></div>
                 <h3>Контакт</h3>
                 <p>Адреса, телефони, е-пошта и информације за рекламације</p>
             </a>

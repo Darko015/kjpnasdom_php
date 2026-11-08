@@ -21,17 +21,17 @@ render_header(
 
     <div class="dokumenti-grid">
         <a href="/program-poslovanja" class="service-card dokumenti-card">
-            <div class="service-icon">📄</div>
+            <div class="service-icon service-icon-doc" aria-hidden="true"></div>
             <h3>Програм пословања</h3>
             <p>Преглед докумената и планова пословања по годинама</p>
         </a>
         <a href="/izvestaji-poslovanja" class="service-card dokumenti-card">
-            <div class="service-icon">📊</div>
+            <div class="service-icon service-icon-chart" aria-hidden="true"></div>
             <h3>Извештаји о пословању</h3>
             <p>Квартални извештаји и извештаји независног ревизора, 2021–2026</p>
         </a>
         <a href="/javne-nabavke" class="service-card dokumenti-card">
-            <div class="service-icon">📋</div>
+            <div class="service-icon service-icon-list" aria-hidden="true"></div>
             <h3>Јавне набавке</h3>
             <p>Документи и информације о јавним набавкама</p>
         </a>
